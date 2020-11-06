@@ -1,0 +1,10 @@
+Pane{
+    -fx-border-color: #000099;
+    -fx-border-radius: 40;
+}
+TextField{ 
+    -fx-background-color:#99ffff;
+}
+AnchorPane{
+    -fx-background-color:#99ffff;
+}
