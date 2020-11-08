@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="862.9999000000025" prefWidth="1204.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxapplication5.FXMLController">
+  <children>
+    <Button layoutX="14.0" layoutY="153.0" minHeight="49.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="98.0" text="Lưu">
+      <graphic>
+        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../Images/005-ebook.png" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <MenuBar layoutX="0.0" layoutY="0.0" minHeight="139.0" prefHeight="139.0" prefWidth="1204.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="Người dùng">
+          <graphic>
+            <ImageView fitHeight="129.75" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../Images/004-library.png" />
+              </image>
+            </ImageView>
+          </graphic>
+          <items>
+            <MenuItem mnemonicParsing="false" text="Quản lý mượn">
+              <graphic>
+                <ImageView fitHeight="50.0" fitWidth="100.0" layoutX="236.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../Images/002-writing.png" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="Đón xe">
+              <graphic>
+                <ImageView fitHeight="50.0" fitWidth="100.0" layoutX="379.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../Images/037-book.png" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="Trung thu">
+              <graphic>
+                <ImageView fitHeight="50.0" fitWidth="100.0" layoutX="656.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../Images/030-owl.png" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </MenuItem>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Quản lý">
+          <graphic>
+            <ImageView fitHeight="129.75" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../Images/009-idea.png" />
+              </image>
+            </ImageView>
+          </graphic>
+          <items>
+            <MenuItem mnemonicParsing="false" text="Bán bánh">
+              <graphic>
+                <ImageView fitHeight="50.0" fitWidth="100.0" layoutX="626.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../Images/033-language.png" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="Danh sách đọc">
+              <graphic>
+                <ImageView fitHeight="50.0" fitWidth="100.0" layoutX="616.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../Images/045-ask.png" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="Quản lý thứ tự">
+              <graphic>
+                <ImageView fitHeight="50.0" fitWidth="100.0" layoutX="606.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../Images/031-music.png" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </MenuItem>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Nhân viên">
+          <graphic>
+            <ImageView fitHeight="129.75" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../Images/005-ebook.png" />
+              </image>
+            </ImageView>
+          </graphic>
+          <items>
+            <MenuItem mnemonicParsing="false" text="Đọc">
+              <graphic>
+                <ImageView fitHeight="50.0" fitWidth="100.0" layoutX="576.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../Images/007-certificate.png" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="Nghe">
+              <graphic>
+                <ImageView fitHeight="50.0" fitWidth="100.0" layoutX="586.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../Images/046-reading.png" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="Nói">
+              <graphic>
+                <ImageView fitHeight="50.0" fitWidth="100.0" layoutX="596.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../Images/020-online%20course.png" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </MenuItem>
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </children>
+  <stylesheets>
+    <URL value="@index.css" />
+  </stylesheets>
+</AnchorPane>

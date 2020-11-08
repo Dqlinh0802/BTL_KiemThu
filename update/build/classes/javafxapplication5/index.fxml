@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane prefHeight="885.0" prefWidth="1241.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafxapplication5.FXMLController">
+  <tabs>
+    <Tab text="Danh mục sách">
+      <content>
+        <SplitPane dividerPositions="0.22446555819477435" focusTraversable="true" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+          <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="172.0" prefWidth="1239.0">
+              <children>
+                <ImageView fitHeight="115.0" fitWidth="153.33333333333331" layoutX="39.0" layoutY="16.0" mouseTransparent="false" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../Images/010-research.png" />
+                  </image>
+                </ImageView>
+                <ImageView fitHeight="115.0" fitWidth="153.33333333333331" layoutX="216.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../Images/028-biography.png" />
+                  </image>
+                </ImageView>
+                <ImageView fitHeight="115.0" fitWidth="153.33333333333331" layoutX="388.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../Images/015-trilogy.png" />
+                  </image>
+                </ImageView>
+                <Label layoutX="50.0" layoutY="152.0" text="Tìm kiếm sách" />
+                <Label layoutX="246.0" layoutY="152.0" text="Tìm kiếm sách" />
+                <Label layoutX="418.0" layoutY="152.0" text="Tìm kiếm sách" />
+              </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+          </items>
+        </SplitPane>
+      </content>
+    </Tab>
+    <Tab text="Thông tin tài khoản">
+      <content>
+        <SplitPane dividerPositions="0.18052256532066507" focusTraversable="true" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+          <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="172.0" prefWidth="1239.0" />
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+          </items>
+        </SplitPane>
+      </content>
+    </Tab>
+    <Tab text="Quản lý mượn - trả sách">
+      <content>
+        <SplitPane dividerPositions="0.18052256532066507" focusTraversable="true" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+          <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="172.0" prefWidth="1239.0" />
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+          </items>
+        </SplitPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
