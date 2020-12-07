@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="884.0" prefWidth="1226.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication5.FXMLController">
+  <children>
+      <AnchorPane fx:id="trangChu" prefHeight="122.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <ImageView fx:id="danhMuc" fitHeight="87.0" fitWidth="111.0" layoutX="126.0" layoutY="3.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/036-classical.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="nguoiDung" fitHeight="87.0" fitWidth="111.0" layoutX="362.0" layoutY="3.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/profile.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="muonTra" fitHeight="87.0" fitWidth="111.0" layoutX="623.0" layoutY="3.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/041-speech%20bubble.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="caiDat" fitHeight="87.0" fitWidth="111.0" layoutX="840.0" layoutY="3.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/042-gear.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="close" fitHeight="50.0" fitWidth="50.0" layoutX="1125.0" layoutY="36.0" onMousePressed="#thoat" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/close1.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="124.0" layoutY="90.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Danh mục" />
+            <Label layoutX="317.0" layoutY="90.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Quản lý người dùng" />
+            <Label layoutX="596.0" layoutY="90.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Mượn - trả sách" />
+            <Label layoutX="853.0" layoutY="90.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Cài đặt" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="a1" layoutY="140.0" prefHeight="82.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="151.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/up.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="theLoaiSach" fitHeight="58.0" fitWidth="48.0" layoutX="148.0" layoutY="7.0" onMousePressed="#xuLyDanhMuc" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/038-theater.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="112.0" layoutY="56.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Thể loại sách" />
+            <Label layoutX="345.0" layoutY="56.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Ngôn ngữ sách" />
+            <Label layoutX="602.0" layoutY="56.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Tác giả" />
+            <Label layoutX="791.0" layoutY="56.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Nhà xuất bản" />
+            <Label layoutX="1029.0" layoutY="56.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Kệ sách" />
+            <ImageView fx:id="ngonNguSach" fitHeight="58.0" fitWidth="48.0" layoutX="392.0" layoutY="7.0" onMousePressed="#xuLyDanhMuc" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/033-language.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="tacGia" fitHeight="58.0" fitWidth="48.0" layoutX="609.0" layoutY="7.0" onMousePressed="#xuLyDanhMuc" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/028-biography.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="nhaXuatBan" fitHeight="58.0" fitWidth="48.0" layoutX="827.0" layoutY="7.0" onMousePressed="#xuLyDanhMuc" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/012-typewriter.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="keSach" fitHeight="58.0" fitWidth="48.0" layoutX="1040.0" layoutY="7.0" onMousePressed="#xuLyDanhMuc" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/017-book%20shelf.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="a2" layoutY="140.0" prefHeight="82.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="348.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/up.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="nhanVien" fitHeight="58.0" fitWidth="48.0" layoutX="337.0" layoutY="8.0" onMousePressed="#xuLyNguoiDung" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/customer-service-agent.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="317.0" layoutY="56.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Nhân viên" />
+            <ImageView fx:id="QLDocGia" fitHeight="58.0" fitWidth="48.0" layoutX="688.0" layoutY="6.0" onMousePressed="#xuLyNguoiDung" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/graduate.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="643.0" layoutY="56.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Quản lý độc giả" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="a3" layoutY="140.0" prefHeight="82.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="549.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/up.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="314.0" layoutY="56.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Mượn sách" />
+            <ImageView fx:id="muonSach" fitHeight="58.0" fitWidth="48.0" layoutX="340.0" layoutY="5.0" onMousePressed="#xuLyMuonTra" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/030-owl.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="670.0" layoutY="56.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Trả sách" />
+            <ImageView fx:id="traSach" fitHeight="58.0" fitWidth="48.0" layoutX="685.0" layoutY="5.0" onMousePressed="#xuLyMuonTra" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/037-book.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="a4" layoutY="140.0" prefHeight="82.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="777.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/up.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="321.0" layoutY="56.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Chưa biết" />
+            <ImageView fx:id="chucNang1" fitHeight="58.0" fitWidth="48.0" layoutX="340.0" layoutY="5.0" onMousePressed="#xuLyCaiDat" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/038-theater.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="635.0" layoutY="56.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="đặt chức năng gì" />
+            <ImageView fx:id="chucNang2" fitHeight="58.0" fitWidth="48.0" layoutX="685.0" layoutY="5.0" onMousePressed="#xuLyCaiDat" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/029-audio%20book.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="chuyenTrangDanhMuc" prefHeight="122.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <Label layoutX="161.0" layoutY="77.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Thể loại sách" />
+            <ImageView fx:id="theLoaiSach_1" fitHeight="58.0" fitWidth="48.0" layoutX="196.0" layoutY="24.0" onMousePressed="#xuLyDanhMuc" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/038-theater.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="338.0" layoutY="77.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Ngôn ngữ sách" />
+            <ImageView fx:id="ngonNguSach_1" fitHeight="58.0" fitWidth="48.0" layoutX="382.0" layoutY="24.0" onMousePressed="#xuLyDanhMuc" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/033-language.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="562.0" layoutY="77.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Tác giả" />
+            <ImageView fx:id="tacGia_1" fitHeight="58.0" fitWidth="48.0" layoutX="571.0" layoutY="24.0" onMousePressed="#xuLyDanhMuc" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/028-biography.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="740.0" layoutY="77.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Nhà xuất bản" />
+            <ImageView fx:id="nhaXuatBan_1" fitHeight="58.0" fitWidth="48.0" layoutX="765.0" layoutY="24.0" onMousePressed="#xuLyDanhMuc" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/012-typewriter.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="949.0" layoutY="77.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Kệ sách" />
+            <ImageView fx:id="keSach_1" fitHeight="58.0" fitWidth="48.0" layoutX="960.0" layoutY="24.0" onMousePressed="#xuLyDanhMuc" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/017-book%20shelf.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="troVe" fitHeight="50.0" fitWidth="50.0" layoutX="1135.0" layoutY="36.0" onMousePressed="#quayLai" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/036-classical.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="nguoiDungNho1" fitHeight="36.0" fitWidth="36.0" layoutX="77.0" layoutY="14.0" onMousePressed="#xuLyDanhMuc" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/profile.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="muonTraNho1" fitHeight="36.0" fitWidth="36.0" layoutX="24.0" layoutY="71.0" onMousePressed="#xuLyDanhMuc" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/041-speech%20bubble.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="caiDatNho1" fitHeight="36.0" fitWidth="36.0" layoutX="77.0" layoutY="71.0" onMousePressed="#xuLyDanhMuc" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/042-gear.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="square" fitHeight="60.0" fitWidth="60.0" layoutX="11.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/square.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="chuyenTrangNguoiDung" prefHeight="122.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <ImageView fx:id="troVe1" fitHeight="50.0" fitWidth="50.0" layoutX="1135.0" layoutY="36.0" onMousePressed="#quayLai" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="nhanVien_1" fitHeight="58.0" fitWidth="48.0" layoutX="332.0" layoutY="24.0" onMousePressed="#xuLyNguoiDung" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/customer-service-agent.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="312.0" layoutY="86.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Nhân viên" />
+            <ImageView fx:id="QLDocGia_1" fitHeight="58.0" fitWidth="48.0" layoutX="687.0" layoutY="24.0" onMousePressed="#xuLyNguoiDung" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/graduate.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="643.0" layoutY="86.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Quản lý độc giả" />
+            <ImageView fx:id="danhMucNho1" fitHeight="36.0" fitWidth="36.0" layoutX="24.0" layoutY="14.0" onMousePressed="#xuLyNguoiDung" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/036-classical.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="77.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/profile.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="muonTraNho2" fitHeight="36.0" fitWidth="36.0" layoutX="24.0" layoutY="71.0" onMousePressed="#xuLyNguoiDung" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/041-speech%20bubble.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="caiDatNho2" fitHeight="36.0" fitWidth="36.0" layoutX="77.0" layoutY="71.0" onMousePressed="#xuLyNguoiDung" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/042-gear.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="65.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/square.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="chuyenTrangMuonTra" prefHeight="122.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <ImageView fx:id="troVe2" fitHeight="50.0" fitWidth="50.0" layoutX="1135.0" layoutY="36.0" onMousePressed="#quayLai" onTouchPressed="#quayLai" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="312.0" layoutY="86.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Mượn sách" />
+            <ImageView fx:id="muonSach_1" fitHeight="58.0" fitWidth="48.0" layoutX="338.0" layoutY="24.0" onMousePressed="#xuLyMuonTra" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/019-educative%20book.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="638.0" layoutY="86.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Trả sách" />
+            <ImageView fx:id="traSach_1" fitHeight="58.0" fitWidth="48.0" layoutX="653.0" layoutY="24.0" onMousePressed="#xuLyMuonTra" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/006-online%20library.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="danhMucNho2" fitHeight="36.0" fitWidth="36.0" layoutX="24.0" layoutY="14.0" onMousePressed="#xuLyMuonTra" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/036-classical.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="nguoiDungNho2" fitHeight="36.0" fitWidth="36.0" layoutX="77.0" layoutY="14.0" onMousePressed="#xuLyMuonTra" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/profile.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="24.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/041-speech%20bubble.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="caiDatNho3" fitHeight="36.0" fitWidth="36.0" layoutX="77.0" layoutY="71.0" onMousePressed="#xuLyMuonTra" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/042-gear.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="11.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/square.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="chuyenTrangCaiDat" prefHeight="122.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <ImageView fx:id="troVe3" fitHeight="50.0" fitWidth="50.0" layoutX="1135.0" layoutY="36.0" onMousePressed="#quayLai" onTouchPressed="#quayLai" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="319.0" layoutY="86.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Chưa biết" />
+            <ImageView fx:id="chucNang1_1" fitHeight="58.0" fitWidth="48.0" layoutX="338.0" layoutY="24.0" onMousePressed="#xuLyCaiDat" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/019-educative%20book.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="607.0" layoutY="86.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="đặt chức năng gì" />
+            <ImageView fx:id="chucNang2_1" fitHeight="58.0" fitWidth="48.0" layoutX="653.0" layoutY="24.0" onMousePressed="#xuLyCaiDat" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/006-online%20library.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="danhMucNho3" fitHeight="36.0" fitWidth="36.0" layoutX="24.0" layoutY="14.0" onMousePressed="#xuLyCaiDat" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/036-classical.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="nguoiDungNho3" fitHeight="36.0" fitWidth="36.0" layoutX="77.0" layoutY="14.0" onMousePressed="#xuLyCaiDat" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/profile.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="muonTraNho3" fitHeight="36.0" fitWidth="36.0" layoutX="24.0" layoutY="71.0" onMousePressed="#xuLyCaiDat" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/041-speech%20bubble.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="77.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/042-gear.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="65.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/square.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="trangTheLoaiSach" layoutY="140.0" prefHeight="744.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <Label layoutX="450.0" layoutY="30.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 36;" text="Các đầu sách" />
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="206.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/up.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="thanhCongCu1" layoutX="1119.0" prefHeight="744.0" prefWidth="137.0" style="-fx-background-color: bisque;">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="29.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/addList.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label layoutX="43.0" layoutY="180.0" style="-fx-text-fill: #3979FB; -fx-font-size: 20;" text="Thêm" />
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="29.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/editBook.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="timSach" fitHeight="80.0" fitWidth="80.0" layoutX="29.0" layoutY="390.0" onMousePressed="#timSach" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/search.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="29.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/waste.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label layoutX="51.0" layoutY="327.0" style="-fx-text-fill: #3979FB; -fx-font-size: 20;" text="Sửa" />
+                  <Label layoutX="52.0" layoutY="470.0" style="-fx-text-fill: #3979FB; -fx-font-size: 20;" text="Tìm" />
+                  <Label layoutX="52.0" layoutY="634.0" style="-fx-text-fill: #3979FB; -fx-font-size: 20;" text="Xóa" />
+                  <Label layoutX="-63.0" layoutY="434.0" rotate="-90.0" style="-fx-text-fill: #3979FB; -fx-font-size: 16;" text="Bấm vào đây để tìm kiếm" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="bang" layoutX="103.0" layoutY="149.0" prefHeight="574.0" prefWidth="902.0" style="-fx-font-size: 16;" />
+            <AnchorPane fx:id="thanhTimKiem" layoutX="103.0" layoutY="83.0" prefHeight="66.0" prefWidth="357.0" visible="false">
+               <children>
+                  <TextField fx:id="txtKeyword" layoutY="13.0" prefHeight="50.0" prefWidth="357.0" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="327.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/search1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="thanhTimKiem1" layoutX="704.0" layoutY="48.0" prefHeight="290.0" prefWidth="400.0" style="-fx-background-color: bisque; -fx-background-radius: 25;" visible="false">
+               <children>
+                  <TextField fx:id="txtKeyword1" layoutX="22.0" layoutY="8.0" prefHeight="50.0" prefWidth="357.0" promptText="Mã sách(kiểu String)" />
+                  <TextField fx:id="txtKeyword11" layoutX="22.0" layoutY="64.0" prefHeight="50.0" prefWidth="357.0" promptText="Tên sách(kiểu String)" />
+                  <TextField fx:id="txtKeyword111" layoutX="22.0" layoutY="120.0" prefHeight="50.0" prefWidth="357.0" promptText="Số lượng(kiểu int)" />
+                  <TextField fx:id="txtKeyword112" layoutX="22.0" layoutY="176.0" prefHeight="50.0" prefWidth="357.0" promptText="Năm xuất bản(kiểu int)" />
+                  <TextField fx:id="txtKeyword1121" layoutX="22.0" layoutY="232.0" prefHeight="50.0" prefWidth="357.0" promptText="Mô tả sách(kiểu String)" />
+                  <ImageView fitHeight="26.0" fitWidth="33.0" layoutX="371.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/up.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="trangNgonNguSach" layoutY="140.0" prefHeight="744.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <Label layoutX="301.0" layoutY="45.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Ngôn ngữ sách" />
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="393.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/up.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="trangTacGia" layoutY="140.0" prefHeight="744.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <Label layoutX="800.0" layoutY="600.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Tác giả sách" />
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="580.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/up.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="trangNhaXuatBan" layoutY="140.0" prefHeight="744.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <Label layoutX="800.0" layoutY="100.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Nhà xuất bản" />
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="780.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/up.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="trangKeSach" layoutY="140.0" prefHeight="744.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <Label layoutX="80.0" layoutY="80.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Kệ sách" />
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="975.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/up.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="trangNhanVien" layoutY="140.0" prefHeight="744.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <Label layoutX="600.0" layoutY="150.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Nhân viên" />
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="342.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/up.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="trangQLDocGia" layoutY="140.0" prefHeight="744.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <Label layoutX="193.0" layoutY="360.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Quản lý độc giả" />
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="698.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/up.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="1119.0" prefHeight="744.0" prefWidth="137.0" style="-fx-background-color: bisque;">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="29.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/addUser.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="43.0" layoutY="180.0" style="-fx-text-fill: #3979FB; -fx-font-size: 20;" text="Thêm" />
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="29.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/editUser.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="29.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/findUser.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="29.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/wasteUser.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="51.0" layoutY="327.0" style="-fx-text-fill: #3979FB; -fx-font-size: 20;" text="Sửa" />
+                  <Label layoutX="52.0" layoutY="470.0" style="-fx-text-fill: #3979FB; -fx-font-size: 20;" text="Tìm" />
+                  <Label layoutX="52.0" layoutY="634.0" style="-fx-text-fill: #3979FB; -fx-font-size: 20;" text="Xóa" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="trangMuonSach" layoutY="140.0" prefHeight="744.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <Label layoutX="690.0" layoutY="100.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Mượn sách" />
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="350.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/up.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="trangTraSach" layoutY="140.0" prefHeight="744.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <Label layoutX="900.0" layoutY="600.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Trả sách" />
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="665.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/up.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="trangChucNang1" layoutY="140.0" prefHeight="744.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <Label layoutX="400.0" layoutY="150.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="Chưa biết" />
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="350.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/up.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="trangChucNang2" layoutY="140.0" prefHeight="744.0" prefWidth="1256.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <Label layoutX="600.0" layoutY="200.0" style="-fx-text-fill: #97FFFF; -fx-font-size: 20;" text="đặt chức năng" />
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="665.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/up.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+  </children>
+  <stylesheets>
+    <URL value="@index.css" />
+  </stylesheets>
+</AnchorPane>
