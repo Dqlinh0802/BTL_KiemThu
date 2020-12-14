@@ -79,6 +79,9 @@ public class DangNhapController implements Initializable {
         stage.show();
     }
     
+   
+    
+    
     @FXML private void kiemTra(KeyEvent e){
         if(tenDangNhap.getText().length() > 45 || matKhau.getText().length() > 45){
             Alert alert1 = new Alert(AlertType.INFORMATION);
@@ -105,7 +108,7 @@ public class DangNhapController implements Initializable {
             }
         }
         if(event.getTarget() == btnNguoiDung)
-            newWindow("DocGia.fxml");
+            newWindow("NguoiDung.fxml");
             
             
     }
