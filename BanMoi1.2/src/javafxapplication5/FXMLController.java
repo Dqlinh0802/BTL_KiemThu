@@ -805,19 +805,15 @@ public class FXMLController implements Initializable {
                 alert.setContentText("Bạn muốn mượn quyển này???");
                 alert.showAndWait().ifPresent(res -> {
                     if (res == ButtonType.OK) {
-//                        if (q.getSoLuong() <= 0 ) {
-//                            alert.setContentText("Hết sách. Mượn thất bại!!!");
-//                            alert.show();
-//                        }
-//                        else{
-//                            try {
-//                                SachServices.getSachById(q.getMaSach());
-//                            } catch (SQLException ex) {
-//                                Logger.getLogger(FXMLController.class.getName()).log(Level.SEVERE, null, ex);
-//                            }
-//                            alert.setContentText("Bạn đã thành công 1 sách");
-                            loadMuon("");
-//                        }
+                                                     
+                        try {
+                            loadMuon(q.getMaSach(), q.getSoLuong());  
+                            loadMuon_1("");
+                            //                        
+                        } catch (SQLException ex) {
+                            Logger.getLogger(FXMLController.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                            
                     }
                 });
             });
@@ -839,9 +835,14 @@ public class FXMLController implements Initializable {
     @FXML
     private TableView bangMuonSach;
     // loadMuon sach
-    private void loadMuon(String kw) {
+    private void loadMuon_1(String kw) throws SQLException
+    {
+        bangMuonSach.setItems(FXCollections.observableArrayList(SachServices.getSach(kw)));
+    }
+    private void loadMuon(String kw, int sl) {
         try {
-            bangMuonSach.setItems(FXCollections.observableArrayList(SachServices.getSach(kw)));
+            SachServices.muon(kw, sl);
+             bangMuonSach.setItems(FXCollections.observableArrayList(SachServices.getSach(kw)));
         } catch (SQLException ex) {
             Logger.getLogger(FXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -928,7 +929,8 @@ public class FXMLController implements Initializable {
             loadDocGia("");
             
             buildTable4();
-            loadMuon("");
+            loadMuon("", 0);
+            loadMuon_1("");
             
             txtKeyword.textProperty().addListener(evt -> {
                 loadSach(txtKeyword.getText());

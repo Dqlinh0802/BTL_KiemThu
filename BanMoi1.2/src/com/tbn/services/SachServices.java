@@ -57,6 +57,114 @@ public class SachServices {
         
     }
     
+    public static List<Sach> getNXB(String kw) throws SQLException{
+        Connection  conn = Utils.getConn();
+            
+        String sql = "SELECT * FROM sach";
+
+        if (kw != null && !kw.trim().isEmpty())
+            sql += " WHERE namXuatBan like ?";
+        
+        PreparedStatement stm = conn.prepareStatement(sql);
+
+        if (kw != null && !kw.isEmpty()) {
+            stm.setString(1, String.format("%%%s%%", kw));
+        }
+
+        ResultSet rs = stm.executeQuery();
+
+        List<Sach> s = new ArrayList<>();
+        while (rs.next()) {
+            
+            String maSach = rs.getString("maSach");
+            String tenSach = rs.getString("tenSach");
+            int soLuong = rs.getInt("soLuong");
+            String namXuatBan = rs.getString("namXuatBan");
+            String moTaSach = rs.getString("moTaSach");
+            int Id = rs.getInt("maLoaiSach");
+            TheLoaiSach t = new TheLoaiSach(Id);
+            
+            Sach c = new Sach(maSach, tenSach, soLuong, namXuatBan, moTaSach, t);
+
+            s.add(c);
+        }
+        
+        return s;
+        
+    }
+    
+    public static List<Sach> getTL(String kw) throws SQLException{
+        Connection  conn = Utils.getConn();
+            
+        String sql = "SELECT * FROM sach";
+
+        if (kw != null && !kw.trim().isEmpty())
+            sql += " WHERE moTaSach like ?";
+        
+        PreparedStatement stm = conn.prepareStatement(sql);
+
+        if (kw != null && !kw.isEmpty()) {
+            stm.setString(1, String.format("%%%s%%", kw));
+        }
+
+        ResultSet rs = stm.executeQuery();
+
+        List<Sach> s = new ArrayList<>();
+        while (rs.next()) {
+            
+            String maSach = rs.getString("maSach");
+            String tenSach = rs.getString("tenSach");
+            int soLuong = rs.getInt("soLuong");
+            String namXuatBan = rs.getString("namXuatBan");
+            String moTaSach = rs.getString("moTaSach");
+            int Id = rs.getInt("maLoaiSach");
+            TheLoaiSach t = new TheLoaiSach(Id);
+            
+            Sach c = new Sach(maSach, tenSach, soLuong, namXuatBan, moTaSach, t);
+
+            s.add(c);
+        }
+        
+        return s;
+        
+    }
+    
+     public static List<Sach> getSachND(String kw) throws SQLException{
+        Connection  conn = Utils.getConn();
+            
+        String sql = "SELECT *sach , tenLoaiSach FROM sach , loaisach";
+
+        if (kw != null && !kw.trim().isEmpty())
+            sql += " WHERE sach.maLoaiSach = loaisach.maLoaiSach and tenSach like ?";
+        
+        PreparedStatement stm = conn.prepareStatement(sql);
+
+        if (kw != null && !kw.isEmpty()) {
+            stm.setString(1, String.format("%%%s%%", kw));
+        }
+
+        ResultSet rs = stm.executeQuery();
+
+        List<Sach> s = new ArrayList<>();
+        while (rs.next()) {
+            
+            String maSach = rs.getString("maSach");
+            String tenSach = rs.getString("tenSach");
+            int soLuong = rs.getInt("soLuong");
+            String namXuatBan = rs.getString("namXuatBan");
+            String moTaSach = rs.getString("moTaSach");
+            int Id = rs.getInt("tenLoaiSach");
+            TheLoaiSach t = new TheLoaiSach(Id);
+            
+            Sach c = new Sach(maSach, tenSach, soLuong, namXuatBan, moTaSach, t);
+
+            s.add(c);
+        }
+        
+        return s;
+        
+    }
+    
     
     //thêm sách
     public static boolean addSach(Sach s) {
@@ -100,13 +208,14 @@ public class SachServices {
         return kq > 0;
     }
     
-    public static void muon(String maSach) throws SQLException {
+    public static void muon(String maSach, int soLuong) throws SQLException {
         Connection conn = Utils.getConn();
         //String sql = "UPDATE sach SET 'soLuong' = 'soLuong - 1' WHERE ('id' ='?')";
-        String sql = "UPDATE `thuviendb`.`sach` SET `soLuong` -= 1 WHERE (`maSach` = ?)";
+        String sql = "UPDATE sach SET soLuong =? WHERE maSach = ?";
         PreparedStatement stm = conn.prepareStatement(sql);
-        stm.setString(1,maSach);
-        
+        stm.setString(2,maSach);
+        stm.setInt(1, soLuong-1);
+        stm.executeUpdate();
     }
     
 //     public static Sach getSachById(String maSach) throws SQLException {

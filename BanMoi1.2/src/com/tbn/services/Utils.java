@@ -22,7 +22,7 @@ public class Utils {
     static{
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/thuviendb", "root", "123456");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/thuviendb", "root", "qn1507");
                     } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Utils.class.getName()).log(Level.SEVERE, null, ex);
         }
